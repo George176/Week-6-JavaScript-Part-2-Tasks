@@ -1,0 +1,187 @@
+// Creating an array of fruits.
+const fruits = ["Apple", "Orange", "Bannana", "Pear", "Peach", "Strawberry", "Cherry", "Acai"];
+// Declaring and initialising variables to 0.
+let totalNumOfA = 0;
+let totalNumOfB = 0;
+let totalNumOfC = 0;
+let totalNumOfD = 0;
+let totalNumOfE = 0;
+let totalNumOfF = 0;
+let totalNumOfG = 0;
+let totalNumOfH = 0;
+let totalNumOfI = 0;
+let totalNumOfJ = 0;
+let totalNumOfK = 0;
+let totalNumOfL = 0;
+let totalNumOfM = 0;
+let totalNumOfN = 0;
+let totalNumOfO = 0;
+let totalNumOfP = 0;
+let totalNumOfQ = 0;
+let totalNumOfR = 0;
+let totalNumOfS = 0;
+let totalNumOfT = 0;
+let totalNumOfU = 0;
+let totalNumOfV = 0;
+let totalNumOfW = 0;
+let totalNumOfX = 0;
+let totalNumOfY = 0;
+let totalNumOfZ = 0;
+// A "for" loop to go through each element in the fruit array.
+for (let fruit = 0; fruit < fruits.length; fruit++) {
+    // Declaring and initialising the variables to 0 and empty strings.
+    let vowels = 0;
+    let consonants = 0;
+    let an = "";
+    let pluralVowels = "";
+    let pluralConsonants = "";
+    let numAInWord = 0;
+    let numBInWord = 0;
+    let numCInWord = 0;
+    let numDInWord = 0;
+    let numEInWord = 0;
+    let numFInWord = 0;
+    let numGInWord = 0;
+    let numHInWord = 0;
+    let numIInWord = 0;
+    let numJInWord = 0;
+    let numKInWord = 0;
+    let numLInWord = 0;
+    let numMInWord = 0;
+    let numNInWord = 0;
+    let numOInWord = 0;
+    let numPInWord = 0;
+    let numQInWord = 0;
+    let numRInWord = 0;
+    let numSInWord = 0;
+    let numTInWord = 0;
+    let numUInWord = 0;
+    let numVInWord = 0;
+    let numWInWord = 0;
+    let numXInWord = 0;
+    let numYInWord = 0;
+    let numZInWord = 0;
+    // A "for" loop to go through each letter in each element of the fruit array.
+    for (let i = 0; i < (fruits[fruit]).length; i++) {
+        // If statement to check if the letter is a vowel or not. If the letter is a vowel, we will add one to the variable "vowels" by using "++". If the letter isn't a vowel then the letter must be a consonant, in which case we will add one to the variable "consonants" by using "++". 
+        if ((fruits[fruit])[i].toLowerCase() === "a" || (fruits[fruit])[i].toLowerCase() === "e" || (fruits[fruit])[i].toLowerCase() === "i" || (fruits[fruit])[i].toLowerCase() === "o" || (fruits[fruit])[i].toLowerCase() === "u") { vowels++ } else { consonants++ }
+        // If statment to check if the 0th element of the word (the first letter) if a vowel or not. If the first letter is a vowel we will set the variable "an" to the string "An". If the first letter of the word isn't a vowel then it must be a consonant, in which case we will change the variable "an" to the string "A". 
+        if ((fruits[fruit])[0].toLowerCase() === "a" || (fruits[fruit])[0].toLowerCase() === "e" || (fruits[fruit])[0].toLowerCase() === "i" || (fruits[fruit])[0].toLowerCase() === "o" || (fruits[fruit])[0].toLowerCase() === "u") { an = "An" } else { an = "A" }
+        // A switch to check what the letter in each word is. 
+        switch ((fruits[fruit])[i].toLowerCase()) {
+            case "a": numAInWord++;
+                break;
+            case "b": numBInWord++;
+                break;
+            case "c": numCInWord++;
+                break;
+            case "d": numDInWord++;
+                break;
+            case "e": numEInWord++;
+                break;
+            case "f": numFInWord++;
+                break;
+            case "g": numGInWord++;
+                break;
+            case "h": numHInWord++;
+                break;
+            case "i": numIInWord++;
+                break;
+            case "j": numJInWord++;
+                break;
+            case "k": numKInWord++;
+                break;
+            case "l": numLInWord++;
+                break;
+            case "m": numMInWord++;
+                break;
+            case "n": numNInWord++;
+                break;
+            case "o": numOInWord++;
+                break;
+            case "p": numPInWord++;
+                break;
+            case "q": numQInWord++;
+                break;
+            case "r": numRInWord++;
+                break;
+            case "s": numSInWord++;
+                break;
+            case "t": numTInWord++;
+                break;
+            case "u": numUInWord++;
+                break;
+            case "v": numVInWord++;
+                break;
+            case "w": numWInWord++;
+                break;
+            case "x": numXInWord++;
+                break;
+            case "y": numYInWord++;
+                break;
+            case "z": numZInWord++;
+                break;
+        }
+    }
+    // Code to add up the total number of each letter in each word.
+    totalNumOfA = totalNumOfA + numAInWord;
+    totalNumOfB = totalNumOfB + numBInWord;
+    totalNumOfC = totalNumOfC + numCInWord;
+    totalNumOfD = totalNumOfD + numDInWord;
+    totalNumOfE = totalNumOfE + numEInWord;
+    totalNumOfF = totalNumOfF + numFInWord;
+    totalNumOfG = totalNumOfG + numGInWord;
+    totalNumOfH = totalNumOfH + numHInWord;
+    totalNumOfI = totalNumOfI + numIInWord;
+    totalNumOfJ = totalNumOfJ + numJInWord;
+    totalNumOfK = totalNumOfK + numKInWord;
+    totalNumOfL = totalNumOfL + numLInWord;
+    totalNumOfM = totalNumOfM + numMInWord;
+    totalNumOfN = totalNumOfN + numNInWord;
+    totalNumOfO = totalNumOfO + numOInWord;
+    totalNumOfP = totalNumOfP + numPInWord;
+    totalNumOfQ = totalNumOfQ + numQInWord;
+    totalNumOfR = totalNumOfR + numRInWord;
+    totalNumOfS = totalNumOfS + numSInWord;
+    totalNumOfT = totalNumOfT + numTInWord;
+    totalNumOfU = totalNumOfU + numUInWord;
+    totalNumOfV = totalNumOfV + numVInWord;
+    totalNumOfW = totalNumOfW + numWInWord;
+    totalNumOfX = totalNumOfX + numXInWord;
+    totalNumOfY = totalNumOfY + numYInWord;
+    totalNumOfZ = totalNumOfZ + numZInWord;
+    // If statement to determine if we should use "vowels" or "vowel" in our sentence.
+    if (vowels > 1 || vowels === 0) { pluralVowels = "vowels" } else if (vowels === 1) { pluralVowels = "vowel" }
+    // If statement to determine if we should use "consonants" or "consonant" in our sentence.
+    if (consonants > 1 || consonants === 0) { pluralConsonants = "consonants" } else if (consonants === 1) { pluralConsonants = "consonant" }
+    // Printing out the sentence to our console.
+    console.log(`${an} ${fruits[fruit]} has ${vowels} ${pluralVowels} and ${consonants} ${pluralConsonants}.`);
+
+}
+// Printing out the total number of each letter in our array.
+console.log(`Total number of letter As: ${totalNumOfA}.`);
+console.log(`Total number of letter Bs: ${totalNumOfB}.`);
+console.log(`Total number of letter Cs: ${totalNumOfC}.`);
+console.log(`Total number of letter Ds: ${totalNumOfD}.`);
+console.log(`Total number of letter Es: ${totalNumOfE}.`);
+console.log(`Total number of letter Fs: ${totalNumOfF}.`);
+console.log(`Total number of letter Gs: ${totalNumOfG}.`);
+console.log(`Total number of letter Hs: ${totalNumOfH}.`);
+console.log(`Total number of letter Is: ${totalNumOfI}.`);
+console.log(`Total number of letter Js: ${totalNumOfJ}.`);
+console.log(`Total number of letter Ks: ${totalNumOfK}.`);
+console.log(`Total number of letter Ls: ${totalNumOfL}.`);
+console.log(`Total number of letter Ms: ${totalNumOfM}.`);
+console.log(`Total number of letter Ns: ${totalNumOfN}.`);
+console.log(`Total number of letter Os: ${totalNumOfO}.`);
+console.log(`Total number of letter Ps: ${totalNumOfP}.`);
+console.log(`Total number of letter Qs: ${totalNumOfQ}.`);
+console.log(`Total number of letter Rs: ${totalNumOfR}.`);
+console.log(`Total number of letter Ss: ${totalNumOfS}.`);
+console.log(`Total number of letter Ts: ${totalNumOfT}.`);
+console.log(`Total number of letter Us: ${totalNumOfU}.`);
+console.log(`Total number of letter Vs: ${totalNumOfV}.`);
+console.log(`Total number of letter Ws: ${totalNumOfW}.`);
+console.log(`Total number of letter Xs: ${totalNumOfX}.`);
+console.log(`Total number of letter Ys: ${totalNumOfY}.`);
+console.log(`Total number of letter Zs: ${totalNumOfZ}.`);

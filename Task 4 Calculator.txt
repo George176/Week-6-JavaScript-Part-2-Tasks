@@ -1,0 +1,63 @@
+// Defining the calculator function.
+function calculator() {
+    // Asking the user for the first number.
+    let firstValue = Number(prompt("\nEnter number:"));
+    // Asking the user for the second number.
+    let secondValue = Number(prompt("\nEnter a second number if you aren't going to be using the sine, cosine or tangent functions:"));
+    let operation = prompt("Enter  \" + \"  for add\nEnter  \" - \"  for subtract\nEnter  \" / \"  for divide\nEnter  \" x \"  for multiplication\nEnter  \" ^ \"  for to-the-power-of\nEnter  \" s \"  for Sine\nEnter  \" c \"  for Cosine\nEnter  \" t \"  for Tangent");
+    // Defining the operator functions.
+    function addition(firstValue, secondValue) { return (firstValue + secondValue) }
+    function subtraction(firstValue, secondValue) { return (firstValue - secondValue) }
+    function division(firstValue, secondValue) { return (firstValue / secondValue) }
+    function multiplication(firstValue, secondValue) { return (firstValue * secondValue) }
+    function power(firstValue, secondValue) { return (Math.pow(firstValue, secondValue)) }
+    function sine(firstValue) { return (Math.sin(firstValue)) }
+    function cosine(firstValue) { return (Math.cos(firstValue)) }
+    function tangent(firstValue) { return (Math.tan(firstValue)) }
+    // Defining the error message function.
+    function errorMessage() { error = true; alert("\nIncorrect operator entered. Please try again.") }
+    // A switch to determine which operator function to use depending on the operator the user has selected.
+    switch (operation) {
+        case "+": answer = addition(firstValue, secondValue); trig = false;
+            error = false;
+            break;
+        case "-": answer = subtraction(firstValue, secondValue); trig = false;
+            error = false;
+            break;
+        case "/": answer = division(firstValue, secondValue); trig = false;
+            error = false;
+            break;
+        case "x": answer = multiplication(firstValue, secondValue); trig = false;
+            error = false;
+            break;
+        case "^": answer = power(firstValue, secondValue); trig = false;
+            error = false;
+            break;
+        case "s": answer = sine(firstValue); trig = true;
+            error = false;
+            operation = "Sin";
+            break;
+        case "c": answer = cosine(firstValue); trig = true;
+            error = false;
+            operation = "Cos";
+            break;
+        case "t": answer = tangent(firstValue); trig = true;
+            error = false;
+            operation = "Tan";
+            break;
+        default: errorMessage();
+    }
+    // If statement to determine if user has decided to use a trignometric function or not. If statement also checks if there is an error present or not.
+
+    if (!error && !trig) {
+        alert(`\n${firstValue}  ${operation}  ${secondValue}  =  ${answer}`)
+    } else if (!error && trig) {
+        alert(`\n${operation}(${firstValue})  =  ${answer}`)
+    }
+}
+// A while loop so the user can keep using the calculator function until the user wants to quit.
+while (true) {
+    calculator();
+    let anotherCalculation = prompt(`\nWould you like to do another calculation?\nEnter "n" to quit.\nEnter anything else to do another calculation. `)
+    if (anotherCalculation === "n") { alert(`\nYou have exited the calculator program.`); break; }
+}

@@ -1,0 +1,61 @@
+function workingConditions() {
+  // Asking the user for the temperature and storing that value.
+  let temperature = prompt(`\nWhat is the temperature in degrees Celsius?`);
+  // Asking the user for the condition and storing that value.
+  let condition = prompt("\nWhat is the condition? \nPlease enter:\n a for Sunny\n b for Cloudy\n c for Raining\n d for Snowing\n e for Thunder");
+
+  // Defining the errorMessage function.
+  function errorMessage() { goToWork = false; condition = false; alert(`\nIncorrect values entered. \nPlease try again.`) }
+  // Using a switch to check conditions.
+  switch (condition) {
+    case "a":
+      if (temperature >= 10 && temperature <= 20) { goToWork = true; condition = "Sunny" }
+      else if (temperature > 20 && temperature <= 30) { goToWork = true; condition = "Sunny" }
+      else if (temperature > 30) { goToWork = false; condition = "Sunny" }
+      else if (temperature < 10) { goToWork = false; condition = "Sunny" }
+      else { errorMessage(); }
+      break;
+    case "b":
+      if (temperature >= 10 && temperature <= 20) { goToWork = true; condition = "Cloudy" }
+      else if (temperature > 20 && temperature <= 30) { goToWork = true; condition = "Cloudy" }
+      else if (temperature > 30) { goToWork = false; condition = "Cloudy" }
+      else if (temperature < 10) { goToWork = false; condition = "Cloudy" }
+      else { errorMessage(); }
+      break;
+    case "c":
+      if (temperature >= 10 && temperature <= 20) { goToWork = false; condition = "Raining" }
+      else if (temperature > 20 && temperature <= 30) { goToWork = true; condition = "Raining" }
+      else if (temperature > 30) { goToWork = false; condition = "Raining" }
+      else if (temperature < 10) { goToWork = false; condition = "Raining" }
+      else { errorMessage(); }
+      break;
+    case "d":
+      if (temperature >= 10 && temperature <= 20) { goToWork = false; condition = "Snowing" }
+      else if (temperature > 20 && temperature <= 30) { goToWork = false; condition = "Snowing" }
+      else if (temperature > 30) { goToWork = false; condition = "Snowing" }
+      else if (temperature < 10) { goToWork = false; condition = "Snowing" }
+      else { errorMessage(); }
+      break;
+    case "e":
+      if (temperature >= 10 && temperature <= 20) { goToWork = false; condition = "Thunder" }
+      else if (temperature > 20 && temperature <= 30) { goToWork = false; condition = "Thunder" }
+      else if (temperature > 30) { goToWork = false; condition = "Thunder" }
+      else if (temperature < 10) { goToWork = false; condition = "Thunder" }
+      else { errorMessage(); }
+      break;
+    default: errorMessage();
+  }
+
+  if (condition != false) {
+    if (goToWork) { fit = "fit" } else if (!goToWork) { fit = "NOT fit" } else { errorMessage(); };
+    alert(`\nThe temperature is ${temperature} degrees Celsius and the condition is ${condition}.\nThe weather is ${fit} for purpose.`);
+  }
+}
+
+
+while (true) {
+  workingConditions();
+  let another = prompt(`\nEnter "q" to quit. \nEnter anything else to repeat the program.`)
+  if (another === "q") { alert(`\nYou have exited the program.`); break; }
+
+}
